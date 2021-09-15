@@ -1,17 +1,5 @@
-// Create a class property without a constructor
-class Game {
-  name = 'Violin Charades'
-}
-const myGame = new Game()
-// Create paragraph node
-const p = document.createElement('p')
-p.textContent = `I like ${myGame.name}.`
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App';
 
-
-// Create heading node
-const heading = document.createElement('h1')
-heading.textContent = 'Interesting!'
-
-// Append heading node to the DOM
-const app = document.querySelector('#root')
-app.append(heading)
+ReactDOM.render(<App />, document.getElementById("root"));
