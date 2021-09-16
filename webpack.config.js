@@ -1,12 +1,14 @@
-const path = require('path')
+const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
+// const mode = process.env.NODE_ENV == 'production' ? 'production' : 'development'
 /** Swaping from production and dev to view builds */
 let mode = "development";
 if(process.env.NODE_ENV === "production"){
   mode = "production";
 }
+
 module.exports = {
   mode: mode,
   /**
