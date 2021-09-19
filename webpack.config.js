@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+//const ErrorOverlayPlugin = require('error-overlay-webpack-plugin');
 
 // const mode = process.env.NODE_ENV == 'production' ? 'production' : 'development'
 /** Swaping from production and dev to view builds */
@@ -50,10 +51,11 @@ module.exports = {
       filename: 'index.html', // output file
     }),
     new CleanWebpackPlugin(),
+    //new ErrorOverlayPlugin(),
   ],
 
   /** Dev Server */
-  devtool: 'source-map',
+  devtool: 'cheap-module-source-map', // 'source-map'
   devServer: {
     static: './dist',
     port: 8080,
