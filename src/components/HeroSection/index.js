@@ -19,7 +19,13 @@ function HeroSection() {
           Sign up for a new account today
         </HeroP>
         <HeroBtnWrapper>
-          <Button to='signup' onMouseEnter={onHover} onMouseLeave={onHover}>
+          <Button
+            to='signup'
+            onMouseEnter={onHover}
+            onMouseLeave={onHover}
+            primary='true'
+            dark='true'
+          >
             Get Started {hover ? <ArrowForward /> : <ArrowRight />}
           </Button>
         </HeroBtnWrapper>
