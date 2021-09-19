@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 //const ErrorOverlayPlugin = require('error-overlay-webpack-plugin');
 
 // const mode = process.env.NODE_ENV == 'production' ? 'production' : 'development'
@@ -41,6 +42,11 @@ module.exports = {
         test: /\.(woff(2)?|eot|ttf|otf|)$/,
         type: 'asset/inline',
       },
+      /** CSS */
+      {
+        test: /\.css$/i,
+        use: [MiniCssExtractPlugin.loader, 'css-loader'],
+      },
     ],
   },
   /* plugins */
@@ -51,6 +57,7 @@ module.exports = {
       filename: 'index.html', // output file
     }),
     new CleanWebpackPlugin(),
+    new MiniCssExtractPlugin(),
     //new ErrorOverlayPlugin(),
   ],
 
