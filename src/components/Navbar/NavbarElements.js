@@ -7,7 +7,8 @@ import styled from "styled-components";
 export const Nav = styled.nav`
   //background: #101522;
   // background opacity lookin: #10152200
-  background: #101522;  // reduce background color opacity
+  //background: #101522;  // reduce background color opacity change scroll color
+  background: ${({scrollNav}) => (scrollNav ? '#000' : 'transparent')};
   height: 80px;
   margin-top: -80px;
   display: flex;
