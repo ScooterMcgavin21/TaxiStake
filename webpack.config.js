@@ -44,8 +44,14 @@ module.exports = {
       },
       /** CSS */
       {
-        test: /\.css$/i,
-        use: [MiniCssExtractPlugin.loader, 'css-loader'],
+        test:/\.(s[ac]|c)ss$/i,
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: { publicPath: "" }, // This is required for asset imports in CSS, such as url()
+          },
+          "css-loader",
+        ],
       },
       /** Videos */
       {

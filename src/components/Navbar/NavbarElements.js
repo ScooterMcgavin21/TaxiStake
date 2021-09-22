@@ -1,10 +1,13 @@
+import { AiOutlineCodeSandbox } from 'react-icons/ai';
 import { Link as LinkR } from "react-router-dom";
 import { Link as LinkScroll } from 'react-scroll';
 import styled from "styled-components";
-
+//ImStumbleupon
 /** Navbar component rendering <nav> tag */
 export const Nav = styled.nav`
-  background: #000;
+  //background: #101522;
+  // background opacity lookin: #10152200
+  background: #101522;  // reduce background color opacity
   height: 80px;
   margin-top: -80px;
   display: flex;
@@ -34,12 +37,16 @@ export const NavLogo = styled(LinkR)`
   color: #fff;
   justify-self: flex-start;
   cursor: pointer;
-  font-size: 1.5rem;
+  font-size: 2rem;
   display: flex;
   align-items: center;
-  margin-left: 24px;
+  //margin-left: 24px;
   font-weight: bold;
   text-decoration: none;
+`;
+// FiCodesandbox fi import
+export const NavIcon = styled(AiOutlineCodeSandbox)`
+  margin-right: 0.5rem;
 `;
 /** MobileIcon rendering <div> tag */
 export const MobileIcon = styled.div`

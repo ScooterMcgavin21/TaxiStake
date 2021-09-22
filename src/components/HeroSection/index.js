@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import Video from '../../videos/video.mp4';
+import bluevideo from '../../videos/bluevideo.mp4';
 import { Button } from '../ButtonElements';
 import { ArrowForward, ArrowRight, HeroBg, HeroBtnWrapper, HeroContainer, HeroContent, HeroH1, HeroP, VideoBg } from './HeroSectionElements';
+
 
 function HeroSection() {
   const [hover, setHover] = useState(false);
@@ -11,12 +12,12 @@ function HeroSection() {
   return (
     <HeroContainer>
       <HeroBg>
-        <VideoBg autoPlay loop muted src={Video} type='video/mp4' />
+        <VideoBg autoPlay loop muted src={bluevideo} type='bluevideo/mp4' />
       </HeroBg>
       <HeroContent>
-        <HeroH1>Virtual Banking Made Easy</HeroH1>
+        <HeroH1>Decentralized ETH Staking</HeroH1>
         <HeroP>
-          Sign up for a new account today
+        Help secure the Ethereum ecosystem and earn rewards in the process.
         </HeroP>
         <HeroBtnWrapper>
           <Button
